@@ -9,9 +9,12 @@ repository = "https://github.com/Huangkai1008/unit-testing-pattern-samples"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+pytest = "^6.2"
+coverage = "^6.5.0"
+mypy = "^0.991"
+pytest-mypy = "^0.10.1"
 
 [tool.poetry.dev-dependencies]
-pytest = "^5.2"
 
 [tool.isort]
 profile = "black"
