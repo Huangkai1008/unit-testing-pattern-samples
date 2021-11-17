@@ -1,6 +1,6 @@
-from samples.ch02.customer import Customer
-from samples.ch02.product import Product
-from samples.ch02.store import Store
+from samples.customer import Customer
+from samples.product import Product
+from samples.store import Store
 
 
 class TestCustomer:

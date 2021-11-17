@@ -1,7 +1,7 @@
 from dataclasses import dataclass, field
 from typing import Dict
 
-from samples.ch02.product import Product
+from samples.product import Product
 
 __all__ = ['Store']
 
