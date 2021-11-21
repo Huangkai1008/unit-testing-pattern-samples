@@ -6,20 +6,25 @@ from samples.ch03.delivery import is_delivery_valid
 
 
 class TestDelivery:
-
     @pytest.mark.parametrize(
         'delivery,expected',
         [
             pytest.param(
-                dt.datetime.now() + dt.timedelta(days=-1), False, id='past_date',
+                dt.datetime.now() + dt.timedelta(days=-1),
+                False,
+                id='past_date',
             ),
             pytest.param(
-                dt.datetime.now() + dt.timedelta(days=-1), False, id='now',
+                dt.datetime.now() + dt.timedelta(days=-1),
+                False,
+                id='now',
             ),
             pytest.param(
-                dt.datetime.now() + dt.timedelta(days=1), False, id='backward_one_day',
+                dt.datetime.now() + dt.timedelta(days=1),
+                False,
+                id='backward_one_day',
             ),
-        ]
+        ],
     )
     def test_delivery_is_invalid(self, delivery: dt.datetime, expected: bool) -> None:
         assert is_delivery_valid(delivery) == expected
@@ -28,12 +33,16 @@ class TestDelivery:
         'delivery,expected',
         [
             pytest.param(
-                dt.datetime.now() + dt.timedelta(days=2), True, id='backward_two_day',
+                dt.datetime.now() + dt.timedelta(days=2),
+                True,
+                id='backward_two_day',
             ),
             pytest.param(
-                dt.datetime.now() + dt.timedelta(days=3), True, id='backward_three_day',
-            )
-        ]
+                dt.datetime.now() + dt.timedelta(days=3),
+                True,
+                id='backward_three_day',
+            ),
+        ],
     )
     def test_delivery_is_valid(self, delivery: dt.datetime, expected: bool) -> None:
         assert is_delivery_valid(delivery) == expected
