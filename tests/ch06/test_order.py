@@ -1,5 +1,5 @@
-from samples.ch06.listing2.product import Product
 from samples.ch06.listing2.order import Order
+from samples.ch06.listing2.product import Product
 
 
 class TestOrder:

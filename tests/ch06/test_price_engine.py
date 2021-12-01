@@ -1,5 +1,5 @@
-from samples.ch06.listing1.product import Product
 from samples.ch06.listing1.price_engine import calculate_discount
+from samples.ch06.listing1.product import Product
 
 
 class TestPriceEngine:
