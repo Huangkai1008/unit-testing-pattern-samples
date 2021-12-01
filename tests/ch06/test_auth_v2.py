@@ -20,9 +20,9 @@ class TestAuthV2:
 
         def read_lines() -> List[str]:
             return [
-                "Peter; 2019-04-06 16:30:00",
-                "Jane; 2019-04-06 16:40:00",
-                "Jack; 2019-04-06 17:00:00",
+                'Peter; 2019-04-06 16:30:00',
+                'Jane; 2019-04-06 16:40:00',
+                'Jack; 2019-04-06 17:00:00',
             ]
 
         mock_file_system.get_file_paths.side_effect = get_file_paths
